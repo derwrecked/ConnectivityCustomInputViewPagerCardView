@@ -1,22 +1,16 @@
 package com.derwrecked.connectivitycustominputviewpagercardview.MainActivity.Presenters.OperationInterfaces;
 
-import java.io.IOException;
-
 /**
  * Created by Derek on 2/25/2017.
  */
 
-public interface NetworkConnMVPCommOps {
+public interface BluetoothMVPCommOps {
     /**
      * Created by Derek on 2/25/2017.
      * How the presenter accesses the model.
      */
 
     interface Presenter2ModelOps {
-        void registerNSDService() throws IOException;
-        void unregisterNSDService();
-        void startDiscovery();
-        void stopDiscovery();
     }
 
     /**
@@ -27,9 +21,6 @@ public interface NetworkConnMVPCommOps {
      */
 
     interface Model2PresenterOps {
-        void updateViewNetworkInfo(String info);
-        void updateViewServiceState(Boolean bool);
-        void updateViewDiscoveryState(Boolean bool);
     }
 
     /**
@@ -38,10 +29,6 @@ public interface NetworkConnMVPCommOps {
      */
 
     interface View2PresenterOps {
-        void registerNSDService() throws IOException;
-        void unregisterNSDService();
-        void startDiscovery();
-        void stopDiscovery();
 
     }
 
@@ -53,8 +40,5 @@ public interface NetworkConnMVPCommOps {
      * tell view to update a list view.
      */
     interface Presenter2ViewOps {
-        void updateViewNetworkInfo(String info);
-        void updateViewServiceState(Boolean bool);
-        void updateViewDiscoveryState(Boolean bool);
     }
 }

@@ -1,11 +1,10 @@
 package com.derwrecked.connectivitycustominputviewpagercardview.MainActivity.Views;
 
-import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.view.menu.ActionMenuItemView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -18,7 +17,7 @@ import com.derwrecked.connectivitycustominputviewpagercardview.R;
 import javax.inject.Inject;
 
 public class MainActivity extends AppCompatActivity implements
-        NetworkConnectivityFragment.NetConnFragToMainActivity{
+        BluetoothFragment.OnFragmentInteractionListener{
     ViewPager mViewPager;
     @Inject
     MyViewPagerAdapter mMyViewPagerAdapter;
@@ -52,23 +51,12 @@ public class MainActivity extends AppCompatActivity implements
         return true;
     }
 
-/*
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId() == R.id.mainActivityToolbar_networkServiceStatus){
-            if(switchNumber){
-                updateViewServiceState(true);
-                switchNumber = false;
-            }else{
-                updateViewServiceState(false);
-                switchNumber = true;
-            }
-        }
-        return true;
-    }
-    */
+    public void onFragmentInteraction(Uri uri) {
 
-    @Override
+    }
+
+/*    @Override
     public void updateViewServiceState(Boolean bool) {
         ActionMenuItemView item = (ActionMenuItemView) findViewById(R.id.mainActivityToolbar_networkServiceStatus);
         Drawable drawable;
@@ -79,5 +67,5 @@ public class MainActivity extends AppCompatActivity implements
             drawable = getResources().getDrawable(R.drawable.redbox_27x27);
             item.setIcon(drawable);
         }
-    }
+    }*/
 }

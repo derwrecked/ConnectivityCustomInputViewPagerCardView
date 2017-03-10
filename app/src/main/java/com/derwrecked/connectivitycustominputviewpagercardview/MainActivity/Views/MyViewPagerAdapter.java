@@ -21,7 +21,7 @@ public class MyViewPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch(position){
             case 0 :
-                return new NetworkConnectivityFragment();
+                return new BluetoothFragment();
             case 1 :
                 return new CardViewFragment();
             default:
